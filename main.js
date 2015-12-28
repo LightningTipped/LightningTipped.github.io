@@ -1,5 +1,5 @@
 var gameTimer = false;
-var mainInterval = 1000;
+var mainInterval = 20;
 
 var startTime = 0;
 var elapsedTime = 0;
@@ -7,9 +7,9 @@ var totalElapsedTime = 0;
 
 function init() {
 	$(function() {
-		$.getScript("test.js", function() {
-			alert("hi");
-		});
+		$.getScript("script.js", function(){
+
+});
 	});
 	var d = new Date();
 	startTime = d.getTime();
@@ -26,6 +26,8 @@ function tick() {
 		update();
 	}
 	render();
+	d = new Date();
+	startTime = d.getTime();
 }
 function update() {
 	gameUpdate();

@@ -1,6 +1,7 @@
 var handIconOne = 0;
 var handIconTwo = 0;
-var rollTimer = 100;
+var rollTimer = 0;
+var rollInterval = 50;
 
 var playStart = true;
 
@@ -14,18 +15,16 @@ function gameUpdate() {
 	if (playStart) {
 		rollTimer--;
 		if (rollTimer<=0) {
-			rollTimer = 100;
+			rollTimer=rollInterval;
 			roll();
 		}
 	}
 }
 function roll() {
-	handIconOne = Math.floor(Math.random(3));
-	handIconTwo = Math.floor(Math.random(3));
+	handIconOne = Math.floor(3*Math.random());
+	handIconTwo = Math.floor(3*Math.random());
 }
 function gameRender() {
-	$(function(){
-		$("#handOne").text("Hello world!"s);
-		$("#handTwo").text(handIconTwo);
-	});
+	$("#handOne").text(handIconOne);
+	$("#handTwo").text(handIconTwo);
 }
