@@ -1,23 +1,35 @@
-var handIcon = 0;
-var playStart = false;
 var gameTimer = false;
 var mainInterval = 1000;
 
+var startTime = 0;
+var elapsedTime = 0;
+var totalElapsedTime = 0;
+
 function init() {
-	$.getScript("test.js", function(){
-		alert('yay');
-});
-gameTimer = setInterval(gameTick, mainInterval);
+	$(function() {
+		$.getScript("test.js", function() {
+			alert("hi");
+		});
+	});
+	//var d = new Date();
+	//startTime = d.getTime();
+//gameTimer = setInterval(tick, mainInterval);
 }
-function start() {
-	playStart = true;
+function skippedTicks() {
+	return ((Math.floor(totalElapsedTime/mainInterval))-Math.floor((totalElapsedTime-elapsedTime)/mainInterval));
 }
-function gameTick() {
-	sheep();
+function tick() {
+	var d = new Date();
+	elapsedTime = d.getTime()-startTime;
+	totalElapsedTime += elapsedTime;
+	for (i=0; i<skippedTicks(); i++) {
+		update();
+	}
+	render();
 }
-function gameUpdate() {
-	
+function update() {
+	gameUpdate();
 }
-function gameRender() {
-	
+function render() {
+	gameRender();
 }
