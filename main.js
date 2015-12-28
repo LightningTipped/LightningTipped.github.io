@@ -11,9 +11,9 @@ function init() {
 			alert("hi");
 		});
 	});
-	//var d = new Date();
-	//startTime = d.getTime();
-//gameTimer = setInterval(tick, mainInterval);
+	var d = new Date();
+	startTime = d.getTime();
+	gameTimer = setInterval(tick, mainInterval);
 }
 function skippedTicks() {
 	return ((Math.floor(totalElapsedTime/mainInterval))-Math.floor((totalElapsedTime-elapsedTime)/mainInterval));
