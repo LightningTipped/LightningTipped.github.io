@@ -1,0 +1,3 @@
+function sheep() {
+	alert('baa');
+}
