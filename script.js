@@ -24,8 +24,8 @@ function gameUpdate() {
 		if (rollTimer<=0) {
 			rollTimer=rollInterval;
 			roll();
-		}
-		}
+			score--;
+		}}
 		$(document).keydown(function(e) {
 			if (!waiting) {
 			var code = e.which;
@@ -45,6 +45,11 @@ function gameUpdate() {
 			roll();
 				score++;
 				waiting = true;
+			} else if (winCheck!=-2) {
+				rollTimer = rollInterval;
+				roll();
+				score--;
+				waiting=true;
 			}
 			}
 		});
