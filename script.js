@@ -26,9 +26,10 @@ function gameUpdate() {
 		if (rollTimer<=0) {
 			rollTimer=rollInterval;
 			roll();
-			score--;
 			if (score <= 0)
 				score = 0;
+			else
+				score--;
 		}}
 		$(document).keydown(function(e) {
 			if (!waiting) {
@@ -52,6 +53,9 @@ function gameUpdate() {
 			} else if (winCheck!=-2) {
 				rollTimer = rollInterval;
 				roll();
+				if (score <= 0)
+				score = 0;
+			else
 				score--;
 				waiting=true;
 			}
