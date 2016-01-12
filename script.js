@@ -17,11 +17,6 @@ function sheep() {
 function start() {
 	playStart = true;
 }
-function initGame() {
-	$(function() {
-		$.getScript("handfunctions.js");
-	});
-}
 function gameUpdate() {
 	if (playStart) {
 		if (!waiting) {

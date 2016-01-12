@@ -8,10 +8,8 @@ var totalElapsedTime = 0;
 function init() {
 	$(function() {
 		$.getScript("script.js");
+		$.getScript("handfunctions.js");
 	});
-	setTimeout(function () {
-	initGame();
-	}, 1);
 	var d = new Date();
 	startTime = d.getTime();
 	gameTimer = setInterval(tick, mainInterval);
