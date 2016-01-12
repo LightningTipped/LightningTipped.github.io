@@ -16,6 +16,8 @@ function sheep() {
 }
 function start() {
 	playStart = true;
+	rollTimer=rollInterval;
+			roll();
 }
 function gameUpdate() {
 	if (playStart) {
@@ -25,6 +27,8 @@ function gameUpdate() {
 			rollTimer=rollInterval;
 			roll();
 			score--;
+			if (score <= 0)
+				score = 0;
 		}}
 		$(document).keydown(function(e) {
 			if (!waiting) {
