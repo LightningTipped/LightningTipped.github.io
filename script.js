@@ -4,7 +4,7 @@ var rollTimer = 0;
 var rollInterval = 50;
 var keyInput = 0;
 var score = 0;
-var bufferTime = 5;
+var bufferTime = 10;
 var waiting = false;
 
 var handIcons = ["rock", "scissors", "paper"];
