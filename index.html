@@ -18,9 +18,11 @@
 <div id="correctInput">0</div>
 <div id="score">0</div>
 
-<audio controls autoplay>
-	<source src="music.mp3" type="audio/mp3">
-</audio>
+ <audio autoplay id="player" src="music.mp3"> </audio>
+<div>
+    <button onclick="document.getElementById('player').muted=!document.getElementById('player').muted">Mute</button>
+</div>
+
 </div>
 </body>
 </html>
