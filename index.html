@@ -10,18 +10,31 @@
 </head>
 <body onLoad="init()">
 <script src="main.js"></script>
-<h1> The Super Epic </h1> <h1 class="emphasis">ROCK, PAPER, SCISSORS</h1> <h1> Game!!! </h1>
-<div id="gameArea">
+<h1> The Super Epic <span class="emphasis"> ROCK, PAPER, SCISSORS </span> Game!!! </h1>
+
+<table align="center">
+
+<tr><td><span class="specialneedstext"> I'm assuming that the game is in this box here. <br> Also, I didn't understand much of your JavaScript code, 
+so you'll have to talk me through what each piece does </span> 
+<br> <div id="gameArea">
 <div id="handOne" style="display: inline-block">0</div>
 <div id="handTwo" style="display: inline-block">0</div>
 <div id="keyInput">0</div>
 <div id="correctInput">0</div>
 <div id="score">0</div>
+</td>
+</tr>
 
- <audio autoplay id="player" src="music.mp3"> </audio>
+<p>
+
+ <tr><td><audio autoplay loop id="player" src="music.mp3"> </audio>
 <div>
     <button onclick="document.getElementById('player').muted=!document.getElementById('player').muted">Mute</button>
 </div>
+</td>
+</tr>
+
+</table>
 
 </div>
 </body>
