@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Candal);
+
+h1 {
+	font-family: 'Candal', sans-serif;
+	display: inline;
+}
+
+body {
+	color: white;
+	font-size: 20px;
+	background-color: #333231;
+	background-image: url("backgroundBlurred.jpg");
+	background-size: cover;
+}
+
+.emphasis {
+	color: red;
+	font-size: 50px;
+}
