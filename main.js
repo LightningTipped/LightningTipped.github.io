@@ -7,11 +7,14 @@ var totalElapsedTime = 0;
 
 function init() {
 	$(function() {
+		$.when(
 		$.getScript("script.js");
 		$.getScript("handfunctions.js");
-		var d = new Date();
+		).done(function () {
+			var d = new Date();
 	startTime = d.getTime();
 	gameTimer = setInterval(tick, mainInterval);
+		});
 	});
 }
 function skippedTicks() {
