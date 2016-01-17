@@ -3,7 +3,8 @@
 h1 {
 	font-family: 'Candal', sans-serif;
 	display: inline;
-	text-align: center;
+	border-left: 40%;
+	border-right: 40%;
 }
 
 body {
