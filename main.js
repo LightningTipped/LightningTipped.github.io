@@ -21,6 +21,7 @@ function init() {
 	startTime = d.getTime();
 	gameTimer = setInterval(tick, mainInterval)
 	});
+	deferred.resolve();
 }
 function skippedTicks() {
 	return ((Math.floor(totalElapsedTime/mainInterval))-Math.floor((totalElapsedTime-elapsedTime)/mainInterval));
