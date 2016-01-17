@@ -5,16 +5,20 @@ var startTime = 0;
 var elapsedTime = 0;
 var totalElapsedTime = 0;
 
+var deferred = new $.Deferred();
+var promise = deferred.promise();
+
 function init() {
 	$(function() {
-		$.when(
+		promise = promise.then(function() {
 		$.getScript("script.js");
 		$.getScript("handfunctions.js");
-		).done(function () {
-			var d = new Date();
-	startTime = d.getTime();
-	gameTimer = setInterval(tick, mainInterval);
 		});
+	});
+	promise.done(function () {
+		var d = new Date();
+	startTime = d.getTime();
+	gameTimer = setInterval(tick, mainInterval)
 	});
 }
 function skippedTicks() {
