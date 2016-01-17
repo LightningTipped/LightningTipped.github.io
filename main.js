@@ -6,15 +6,13 @@ var elapsedTime = 0;
 var totalElapsedTime = 0;
 
 function init() {
-	setTimeout(function() {
 	$(function() {
 		$.getScript("script.js");
 		$.getScript("handfunctions.js");
-	});
-	}, 1);
-	var d = new Date();
+		var d = new Date();
 	startTime = d.getTime();
 	gameTimer = setInterval(tick, mainInterval);
+	});
 }
 function skippedTicks() {
 	return ((Math.floor(totalElapsedTime/mainInterval))-Math.floor((totalElapsedTime-elapsedTime)/mainInterval));
