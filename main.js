@@ -10,12 +10,12 @@ var promise = deferred.promise();
 var scriptList = ["script.js", "handfunctions.js"];
 
 function init() {
-    $(function() {
-		for (var i in scriptList) {
+	$(function() {
+		for (i in scriptList) {}
 		promise = promise.then(function() {
-			return loadScript(i);}
+		return loadScript(i);}
 		);
-		}
+	}
 	});
 	promise.done(function () {
 		var d = new Date();
