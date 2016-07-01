@@ -7,7 +7,7 @@ var totalElapsedTime = 0;
 
 var deferred = new $.Deferred();
 var promise = deferred.promise();
-var scriptList = {"script.js", "handfunctions.js"};
+var scriptList = ["script.js", "handfunctions.js"];
 
 function init() {
     $(function() {
