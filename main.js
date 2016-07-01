@@ -7,13 +7,15 @@ var totalElapsedTime = 0;
 
 var deferred = new $.Deferred();
 var promise = deferred.promise();
+var scriptList = {"script.js", "handfunctions.js"};
 
 function init() {
-	$(function() {
+    $(function() {
+		for (var i in scriptList) {
 		promise = promise.then(function() {
-		$.getScript("script.js").done(function(){});
-		$.getScript("handfunctions.js").done(function(){});}
+			return loadScript(i);}
 		);
+		}
 	});
 	promise.done(function () {
 		var d = new Date();
@@ -21,6 +23,9 @@ function init() {
 		gameTimer = setInterval(tick, mainInterval)
 	});
 	deferred.resolve();
+}
+function loadScript(scriptName) {
+	return $.getScript(scriptName).done(function(){});
 }
 function skippedTicks() {
 	return ((Math.floor(totalElapsedTime/mainInterval))-Math.floor((totalElapsedTime-elapsedTime)/mainInterval));
