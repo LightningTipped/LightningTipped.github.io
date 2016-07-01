@@ -11,8 +11,8 @@ var promise = deferred.promise();
 function init() {
 	$(function() {
 		promise = promise.then(function() {
-		return $.getScript("script.js").done(function(){});
-		return $.getScript("handfunctions.js").done(function(){});}
+		$.getScript("script.js").done(function(){});
+		$.getScript("handfunctions.js").done(function(){});}
 		);
 	});
 	promise.done(function () {
