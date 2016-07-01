@@ -9,12 +9,9 @@ var deferred = new $.Deferred();
 var promise = deferred.promise();
 
 function init() {
-	$(function() {
 		promise = promise.then(function() {
-		$.getScript("script.js"););
-		$.getScript("handfunctions.js");}
-		);
-	});
+		$.getScript("script.js");
+		$.getScript("handfunctions.js");});
 	promise.done(function () {
 		var d = new Date();
 	startTime = d.getTime();
