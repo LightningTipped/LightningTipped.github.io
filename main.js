@@ -11,7 +11,7 @@ var scriptList = ["script.js", "handfunctions.js"];
 
 function init() {
 	$(function() {
-		for (i in scriptList) {
+		for (var i in scriptList) {
 		promise = promise.then(function() {
 		return loadScript(i);}
 		);
