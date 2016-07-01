@@ -11,14 +11,14 @@ var promise = deferred.promise();
 function init() {
 	$(function() {
 		promise = promise.then(function() {
-		$.getScript("script.js");
-		$.getScript("handfunctions.js");}
+		return $.getScript("script.js").done(function(){});
+		return $.getScript("handfunctions.js").done(function(){});}
 		);
 	});
 	promise.done(function () {
 		var d = new Date();
 	startTime = d.getTime();
-	//gameTimer = setInterval(tick, mainInterval)
+		gameTimer = setInterval(tick, mainInterval)
 	});
 	deferred.resolve();
 }
