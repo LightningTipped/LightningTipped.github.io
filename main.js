@@ -16,7 +16,6 @@ function init() {
 		);
 	});
 	promise.done(function () {
-		alert('eek');
 		var d = new Date();
 	startTime = d.getTime();
 	gameTimer = setInterval(tick, mainInterval)
